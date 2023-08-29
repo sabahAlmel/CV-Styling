@@ -1,0 +1,211 @@
+*{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+header{
+    background-color: #ccc;
+    padding: 20px;
+}
+header div{
+    display: flex;
+    flex-direction:column;
+}
+header figure{
+    margin: 0;
+}
+header hgroup{
+    color: red;
+    font-weight: bold;
+}
+section#contact .contacts{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+
+}
+section#contact .contacts .contact{
+    display: flex;
+    margin: 0;
+}
+section#contact .contacts .contact-type{
+    background-color: red;
+    color: white;
+    margin: 0;
+    padding: 3px 5px;
+    width: 200px;
+}
+section#contact .contacts .contact-value{
+    padding: 5px;
+    width: 400px;
+    margin: 0;
+    padding: 1px 5px;
+}
+section#contact .contacts .contact-value a{
+    text-decoration: none;
+    display: inline-block;
+    color: red;
+}
+@media (min-width:767px) {
+    header {
+        padding: 0px 20px;
+        padding-left: 230px ;
+    }
+    header div{
+        flex-direction: row;
+    }
+    header figure{
+        margin: 16px 40px;
+    }
+    section#contact{
+     position: absolute;
+     top: 10px;
+     right: 0;
+    }
+    section#contact h3{
+        display: none;
+    }
+    
+    section#contact .contacts .contact-value{
+        color: red;
+         background-color: black;
+    }
+    section#contact .contacts .contact-value{
+        width: 700px;
+    }
+}
+/* content */
+.content{
+    margin: 50px 10px;
+}
+.content h3{
+    position: relative;
+    padding:15px 30px;
+    font-size: 22px;
+    border-bottom: 2px solid #ccc;
+}
+.content h3:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    left: -1px;
+    background-color: red;
+}
+.content p{
+    font-weight: 500;
+    line-height: 1.2;
+}
+/* competencies */
+#competencies .skills-primary{
+    margin: 35px 0 45px;
+    position: relative;
+}
+#competencies ,.skills-secondary{
+    position: relative;
+}
+#competencies ,.skills-secondary .skill{
+    opacity: 80%;
+}
+#competencies .skills::before{
+    position: absolute;
+    width: 30px;
+    padding: 20px;
+    top: -45px;
+    left: -20px;
+    font-size: 18px;
+}
+#competencies .skills-primary::before{
+    content: "Main";
+}
+#competencies .skills-secondary:before{
+    content: "Other";
+}
+#competencies .skills .skill{
+    background-color: #ccc;
+    padding: 10px;
+    margin: 5px;
+    position: relative;
+}
+#competencies .skills .skill:before{
+    content: "";
+    position: absolute;
+    background-color: red;
+    padding: 13px;
+    top: 8px;
+    left: 5px;
+}
+#competencies .skills-primary .skill:first-of-type:before{
+    width: 50%;
+}
+#competencies .skills-primary .skill:nth-of-type(2):before{
+    width: 30%;
+}
+#competencies .skills-primary .skill:last-of-type:before{
+    width: 10%;
+}
+#competencies .skills-secondary .skill:first-of-type:before{
+    width: 90%;
+}
+#competencies .skills-secondary .skill:nth-of-type(2):before{
+    width: 50%;
+}
+#competencies .skills-secondary .skill:last-of-type:before{
+    width: 70%;
+}
+#competencies .skills .skill span{
+    color: white;
+    position: relative;
+    font-size: 20px;
+}
+
+/* experience */
+.experience .experience-type{
+    color: red;
+    margin-right: 20px;
+    position: relative;
+}
+.experience .experience-type::after{
+    content: "@";
+    position: absolute;
+    margin-left: 5px;
+}
+.experience .experience-institution{
+    color: red;
+}
+.experience-details{
+    margin-left: 30px;
+    position: relative;
+}
+.experience-details:before{
+    content: "In";
+    position: absolute;
+    color: #ccc;
+    left: -18px;
+}
+.experience .experience-location{
+    color: #ccc;
+}
+.experience .experience-date{
+    color: #ccc;
+}
+.experience-date-separator{
+    color: red;
+}
+
+@media (min-width:767px) {
+    .content{
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .content #about,.content #competencies,.content #experiences,.content #education,.content #hobbies{
+        width: 50%;
+    }
+}
